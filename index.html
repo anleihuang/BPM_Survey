@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>SANKEY Experiment</title>
+<title>IBPSA - Workflow Survey - SANKEY</title>
 <style>
 
 .node rect {
@@ -34,35 +34,78 @@
 <p id="chart">
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script type="text/javascript" src="./lib/js/d3/sankey.js"></script>
+<script src="./lib/js/d3/sankey.js"></script>
 <script>
+	
+var units = "Widgets";
 
-var margin = {top: 1, right: 1, bottom: 6, left: 1},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 10, right: 10, bottom: 10, left: 10},
+    //width = 960
+	//height = 600
+	width = 1280 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
-var formatNumber = d3.format(",.0f"),
-    format = function(d) { return formatNumber(d) + " tuples"; },
-    color = d3.scale.category20();
+var formatNumber = d3.format(",.0f"),    // zero decimal places
+    format = function(d) { return formatNumber(d) + " " + units; }; //,
+//	color = d3.scale.category20();
+	//https://raw.githubusercontent.com/d3/d3/v3.5.17/lib/colorbrewer/colorbrewer.js
+var color = d3.scale.ordinal()
+    .domain(["foo", "bar", "baz"])
+    .range(["#8dd3c7","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69"]);  
 
+// append the svg canvas to the page
 var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
 
+// Set the sankey diagram properties
 var sankey = d3.sankey()
-    .nodeWidth(15)
+    .nodeWidth(25)
     .nodePadding(10)
     .size([width, height]);
 
 var path = sankey.link();
 
-function createChart( energy ) {
+var url = "https://github.com/anleihuang/BPM_Survey/blob/master/IBPSA_EditGeo_r2.json";
+
+// load the data (using the timelyportfolio csv method)
+d3.json(url, function(error, data) {
+
+  //set up graph in same style as original example but empty
+  graph = {"nodes" : [], "links" : []};
+
+    data.forEach(function (d) {
+      graph.nodes.push({ "name": d.source });
+      graph.nodes.push({ "name": d.target });
+      graph.links.push({ "source": d.source,
+                         "target": d.target,
+                         "value": +d.value });
+     });
+
+     // return only the distinct / unique nodes
+     graph.nodes = d3.keys(d3.nest()
+       .key(function (d) { return d.name; })
+       .map(graph.nodes));
+
+     // loop through each link replacing the text with its index from node
+     graph.links.forEach(function (d, i) {
+       graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+       graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+     });
+
+     //now loop through each nodes to make nodes an array of objects
+     // rather than an array of strings
+     graph.nodes.forEach(function (d, i) {
+       graph.nodes[i] = { "name": d };
+     });
+
   sankey
-      .nodes(energy.nodes)
-      .links(energy.links)
-      .layout(32);
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .layout(32);
 
 // add in the links
   var link = svg.append("g").selectAll(".link")
@@ -130,353 +173,8 @@ function createChart( energy ) {
     sankey.relayout();
     link.attr("d", path);
   }
-};
-
-var energyData  =
-{
-"nodes":[
-  {
-    "name": "< 1"
-  },
-  {
-    "name": "1 to 2"
-  },
-  {
-    "name": "3  to 5"
-  },
-  {
-    "name": "6 to 10"
-  },
-  {
-    "name": "11  to 15"
-  },
-  {
-    "name": "16 or more"
-  },
-  {
-    "name": "Time < 40%"
-  },
-  {
-    "name": "40% =< Time =< 80%"
-  },
-  {
-    "name": "Time > 80%"
-  },
-  {
-    "name": "Not Specified"
-  },
-  {
-    "name": "Euclid"
-  },
-  {
-    "name": "Eppy"
-  },
-  {
-    "name": "Params"
-  },
-  {
-    "name": "Rhino/ Grasshopper"
-  },
-  {
-    "name": "BCL components"
-  },
-  {
-    "name": "regex"
-  },
-  {
-    "name": "Embedded features in proprietary tools"
-  },
-  {
-    "name": "Write custom script"
-  }
-],
-
-"links":[
- {
-    "source": "< 1",
-    "target": "Time < 40%",
-    "value": 1
-  },
-  {
-    "source": "< 1",
-    "target": "40% =< Time =< 80%",
-    "value": 0
-  },
-  {
-    "source": "< 1",
-    "target": "Time > 80%",
-    "value": 0
-  },
-  {
-    "source": "1 to 2",
-    "target": "Time < 40%",
-    "value": 4
-  },
-  {
-    "source": "1 to 2",
-    "target": "40% =< Time =< 80%",
-    "value": 5
-  },
-  {
-    "source": "1 to 2",
-    "target": "Time > 80%",
-    "value": 5
-  },
-  {
-    "source": "3  to 5",
-    "target": "Time < 40%",
-    "value": 1
-  },
-  {
-    "source": "3  to 5",
-    "target": "40% =< Time =< 80%",
-    "value": 5
-  },
-  {
-    "source": "3  to 5",
-    "target": "Time > 80%",
-    "value": 8
-  },
-  {
-    "source": "6 to 10",
-    "target": "Time < 40%",
-    "value": 7
-  },
-  {
-    "source": "6 to 10",
-    "target": "40% =< Time =< 80%",
-    "value": 7
-  },
-  {
-    "source": "6 to 10",
-    "target": "Time > 80%",
-    "value": 5
-  },
-  {
-    "source": "11  to 15",
-    "target": "Time < 40%",
-    "value": 5
-  },
-  {
-    "source": "11  to 15",
-    "target": "40% =< Time =< 80%",
-    "value": 3
-  },
-  {
-    "source": "11  to 15",
-    "target": "Time > 80%",
-    "value": 1
-  },
-  {
-    "source": "16 or more",
-    "target": "Time < 40%",
-    "value": 4
-  },
-  {
-    "source": "16 or more",
-    "target": "40% =< Time =< 80%",
-    "value": 5
-  },
-  {
-    "source": "16 or more",
-    "target": "Time > 80%",
-    "value": 1
-  },
-  {
-    "source": "< 1",
-    "target": "Not Specified",
-    "value": 0
-  },
-  {
-    "source": "1 to 2",
-    "target": "Not Specified",
-    "value": 1
-  },
-  {
-    "source": "3  to 5",
-    "target": "Not Specified",
-    "value": 8
-  },
-  {
-    "source": "6 to 10",
-    "target": "Not Specified",
-    "value": 14
-  },
-  {
-    "source": "11  to 15",
-    "target": "Not Specified",
-    "value": 4
-  },
-  {
-    "source": "16 or more",
-    "target": "Not Specified",
-    "value": 1
-  },
-  {
-    "source": "Time < 40%",
-    "target": "Euclid",
-    "value": 6
-  },
-  {
-    "source": "Time < 40%",
-    "target": "Eppy",
-    "value": 0
-  },
-  {
-    "source": "Time < 40%",
-    "target": "Params",
-    "value": 0
-  },
-  {
-    "source": "Time < 40%",
-    "target": "Rhino/ Grasshopper",
-    "value": 0
-  },
-  {
-    "source": "Time < 40%",
-    "target": "BCL components",
-    "value": 7
-  },
-  {
-    "source": "Time < 40%",
-    "target": "regex",
-    "value": 1
-  },
-  {
-    "source": "Time < 40%",
-    "target": "Embedded features in proprietary tools",
-    "value": 7
-  },
-  {
-    "source": "Time < 40%",
-    "target": "Write custom script",
-    "value": 13
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "Euclid",
-    "value": 0
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "Eppy",
-    "value": 0
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "Params",
-    "value": 0
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "Rhino/ Grasshopper",
-    "value": 0
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "BCL components",
-    "value": 6
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "regex",
-    "value": 0
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "Embedded features in proprietary tools",
-    "value": 4
-  },
-  {
-    "source": "40% =< Time =< 80%",
-    "target": "Write custom script",
-    "value": 6
-  },
-  {
-    "source": "Time > 80%",
-    "target": "Euclid",
-    "value": 3
-  },
-  {
-    "source": "Time > 80%",
-    "target": "Eppy",
-    "value": 0
-  },
-  {
-    "source": "Time > 80%",
-    "target": "Params",
-    "value": 0
-  },
-  {
-    "source": "Time > 80%",
-    "target": "Rhino/ Grasshopper",
-    "value": 0
-  },
-  {
-    "source": "Time > 80%",
-    "target": "BCL components",
-    "value": 1
-  },
-  {
-    "source": "Time > 80%",
-    "target": "regex",
-    "value": 0
-  },
-  {
-    "source": "Time > 80%",
-    "target": "Embedded features in proprietary tools",
-    "value": 0
-  },
-  {
-    "source": "Time > 80%",
-    "target": "Write custom script",
-    "value": 3
-  },
-  {
-    "source": "Not Specified",
-    "target": "Euclid",
-    "value": 3
-  },
-  {
-    "source": "Not Specified",
-    "target": "Eppy",
-    "value": 1
-  },
-  {
-    "source": "Not Specified",
-    "target": "Params",
-    "value": 1
-  },
-  {
-    "source": "Not Specified",
-    "target": "Rhino/ Grasshopper",
-    "value": 0
-  },
-  {
-    "source": "Not Specified",
-    "target": "BCL components",
-    "value": 5
-  },
-  {
-    "source": "Not Specified",
-    "target": "regex",
-    "value": 0
-  },
-  {
-    "source": "Not Specified",
-    "target": "Embedded features in proprietary tools",
-    "value": 13
-  },
-  {
-    "source": "Not Specified",
-    "target": "Write custom script",
-    "value": 15
-  }
-]
-}
-
-createChart( energyData )
-
+});
+  
 </script>
 
 </body>
