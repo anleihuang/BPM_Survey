@@ -69,10 +69,8 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-var url = "https://github.com/anleihuang/BPM_Survey/blob/master/IBPSA_EditGeo_r2.json";
-
 // load the data (using the timelyportfolio csv method)
-d3.json(url, function(error, data) {
+d3.json("./data/IBPSA_EditGeo_r2.json", function(error, data) {
 
   //set up graph in same style as original example but empty
   graph = {"nodes" : [], "links" : []};
