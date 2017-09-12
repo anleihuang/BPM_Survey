@@ -19,7 +19,7 @@
   shape-rendering: crispEdges;
 }
 #chart {
-        margin: 20px 0;
+        margin-bottom: 20px 0;
 	height: 320px;
         font: 15px sans-serif;
       }
@@ -33,11 +33,6 @@
 }
 .link:hover {
   stroke-opacity: .5;
-}
-#content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
 }	
 </style>
 
@@ -88,7 +83,7 @@ render("./data/IBPSA_EditGeo_r2.json");
 <div id="chart"></div> 
 <script>  
 var units = "Widgets";
-var margin = {top: 10, right: 10, bottom: 0, left: 10},
+var margin = {top: 0, right: 10, bottom: 0, left: 10},
 width = 640 - margin.left - margin.right,
 height = 320 - margin.top - margin.bottom;
 // render sankey chart
