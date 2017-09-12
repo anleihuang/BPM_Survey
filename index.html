@@ -9,9 +9,16 @@
 <script src="./lib/jquery-2.2.4.min.js"></script>
 <script src="./lib/bootstrap.min.js"></script>
 <script src="./lib/d3.min.js"></script>
+
+<!-- Load sankey libraries -->
 <script src="./lib/render.js"></script>
 <script src="./lib/sankey.js"></script>  
-  
+
+<!-- Load radar chart libraries -->
+<script src="./lib/RadarChart.js"></script> 
+<script src="./data/radarchart_data.js"></script>  
+
+
 <style>
 .node rect {
   cursor: move;
@@ -139,7 +146,12 @@ render("./data/IBPSA_EditGeo_r2.json");
 	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
 </div> 
 </div>	
+	
+<div class="row">
+<script type="text/javascript" src="./data/radarchart_data.js">
+	</script>	
 </div>
-  
+	
+</div> 
 </body>
 </html>
