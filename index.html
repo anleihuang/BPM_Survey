@@ -4,6 +4,7 @@
 
 <!-- load css -->
 <link rel="stylesheet" href="./lib/CSS/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/CSS/style.css" type="text.css"</link>
 
 <!-- load javascript libraries -->
 <script src="./lib/jquery-2.2.4.min.js"></script>
@@ -18,38 +19,14 @@
 <script src="./lib/RadarChart.js"></script> 
 
 <style>
-.node rect {
-  cursor: move;
-  fill-opacity: .9;
-  shape-rendering: crispEdges;
-}
-#chart {
-	height: 360px;
-        font: 15px sans-serif;
-      }
-.node text {
-  text-shadow: 0 1px 0 #fff;
-}
 .link {
   fill: none;
   stroke: #000;
   stroke-opacity: .2;
 }
-.link:hover {
-  stroke-opacity: .5;
-}	
-body {
-    padding-top: 0px;
-    padding-right: 80px;
-    padding-bottom: 0px;
-    padding-left: 80px;
-}  
-.container-fluid {
-  height: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
-}	
+
 </style>
+
 
 <body>
   
@@ -69,62 +46,80 @@ body {
 <div class="container-fluid">    
 
 <!-- Summary -->  
-<h4>abcdefghije </h4> 
-  
-<h4> X. Question: xxxxx</h4>   
-<!-- Row 1: Q: xxxxxx  -->
-<div class="row">
-<p id="chart"></p> 
-<script>  
-// render sankey chart
-render("./data/IBPSA_EditGeo_r2.json");
-</script>
-<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-</div> 
+<h3>abcdefghije </h3> 
 
+<h4> X. Question: xxxxx</h4>  
+	<div class="row"> 
+		<!-- Row 1: Q: xxxxxx  -->  
+		<div class = "col-lg-4">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-8">
+			<div id="chart1">
+			<script>  
+				render("chart1","./data/IBPSA_EditGeo_r2.json");
+			</script>
+			</div> 
+		</div>
+	 </div> 
+
+	<h4> X. Question: xxxxx</h4>   
+	<div class="row"> 
+		<!-- Row 2: Q: xxxxxx  -->  
+		<div class = "col-lg-4">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-8">
+			<div id="chart2">
+			<script>  
+				render("chart2","./data/IBPSA_EditGeo_r2.json");
+			</script>
+			</div> 
+		</div> 
+	</div>
 	
-<h4> X. Question: xxxxx</h4>   
-<!-- Row 1: Q: xxxxxx  -->
-<div class="row">
-<p id="chart"></p> 
-<script>  
-// render sankey chart
-render("./data/IBPSA_EditGeo_r2.json");
-</script>
-<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-</div> 
-
-<h4> X. Question: xxxxx</h4>   
-<!-- Row 1: Q: xxxxxx  -->
-<div class="row">
-<p id="chart"></p> 
-<script>  
-// render sankey chart
-render("./data/IBPSA_EditGeo_r2.json");
-</script>
-<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-</div> 
+	<h4> X. Question: xxxxx</h4>   
+	<div class="row"> 
+		<!-- Row 3: Q: xxxxxx  -->  
+		<div class = "col-lg-4">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-8">
+			<div id="chart3">
+			<script>  
+				render("chart3","./data/IBPSA_EditGeo_r2.json");
+			</script>
+			</div> 
+		</div> 
+	</div>
 	
-<h4> X. Question: xxxxx</h4>   
-<!-- Row 1: Q: xxxxxx  -->
-<div class="row">
-<p id="chart"></p> 
-<script>  
-// render sankey chart
-render("./data/IBPSA_EditGeo_r2.json");
-</script>
-<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-</div> 
-
-<h4> X. Question: xxxxx</h4>   	
-<!-- Q: xxxxxx  -->	
-<div class="row">
-<p id="chart"></p> 
-<script type="text/javascript" src="./data/radarchart_data.js">
-	</script>	
-<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-</div>		
+		<h4> X. Question: xxxxx</h4>   
+	<div class="row"> 
+		<!-- Row 4: Q: xxxxxx  -->  
+		<div class = "col-lg-4">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-8">
+			<div id="chart4">
+			<script>  
+				render("chart4","./data/IBPSA_EditGeo_r2.json");
+			</script>
+			</div> 
+		</div> 
+	</div>
+	
+		<h4> X. Question: xxxxx</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-4">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-8">
+			<div id="chart"></div>
+				<script type="text/javascript" src="./data/radarchart_data.js"></script>
+			</div> 
+		</div> 
+	</div>
 	
 </div> 
 </body>
