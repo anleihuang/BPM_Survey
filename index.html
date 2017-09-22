@@ -5,6 +5,8 @@
 <!-- load css -->
 <link rel="stylesheet" href="./lib/CSS/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="./lib/CSS/style.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/pure-min.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/radar-chart.css" type="text.css"</link>
 
 <!-- load javascript libraries -->
 <script src="./lib/jquery-2.2.4.min.js"></script>
@@ -17,6 +19,24 @@
 
 <!-- Load radar chart libraries -->
 <script src="./lib/RadarChart.js"></script> 
+<script src="./lib/render_radar.js"></script>
+
+<!-- Load wrold map libraries -->
+<script src="./lib/topojson.v1.min.js"></script>
+<script src="./lib/world-continents.js"></script>
+<script src="./lib/datamaps.world.min.js"></script>
+<script src="./lib/geomap.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-63599490-1', 'auto');
+ga('send', 'pageview');
+</script>
+
 
 <style>
 .link {
@@ -55,7 +75,7 @@ footer {
           <div class="container-fluid">
             <div class="navbar-header">
               <h1>Building Performance Automation Survey</h1>
-              <p class="lead">  abcdefg </p>         
+              <p class="lead"> This Survey is conducted by An-Lei Huang and Xing Chen on June 15th, 2017 </p>         
           </div>
         </div>
    </nav>
@@ -65,28 +85,37 @@ footer {
 <div class="container-fluid">    
 
 <!-- Summary -->  
-<h3>abcdefghije </h3> 
+<p> Hey, thank you for visiting the survey results. You might be curious about what motivated us to come up with this survey idea, and how we came up the title of the session. As an energy analyst for the past two-and-half years, most of the time I was struggling with time-consuming, iterative as known as copy and paste tasks. I was wondering if there were any techniques or tools that can improve the workflow or even solve problems. I started with writing Python to do simple parsing work for me. I felt fulfillment and I had more time to deal with problem solving. Last year I attended the ASHRAE conference and heard Michael O’Keefe’s presentation about modeling like a programmer. In the presentation, Michael told about the similarities between modelers and programmers and showed the benefits of applying scripting skills into the workflow. I was inspired by his session and after that I searching existing tools and scripts. There are many tools that already exist that lots of pioneers in our industry who have been developing tools to help us reduce these iterative workflows.
+Then the following question I had, and I believe most of you have been thinking about the same questions, were, are most of us utilizing these tools in our workflow? Are most of us preparing our capabilities such as scripting and programming skills? Are our companies and communities ready for the trends and ready to support the needs (e.g., trainings or workshops)? To answer these questions, we need help from this community. Therefore, this was how the survey was born. Xing and I conducted this survey in mid of June. Thankfully, we had over 70 responses. Thank you again for anyone who completed the survey.
+ </p> 
+<div class="row"> </div>
 
 <h4> 1. Survey Demographic Information </h4>  
 	<div class="row"> 
-		<!-- # 1: Survey Demographic Information   -->  
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+			<div class = "col-lg-12">	
+			<p> This is the participants’ demographic information for our survey. We received a total of 73 responses. Over 50% of the participants are based in the US. And the rest of them are from Europe, South America, Oceania and Asia. In terms of the occupation, most of them are energy modelers or energy analysts. The second and third highest occupations were academic professionals and architects.</p>	
 		</div>	
-		<div class="col-lg-8">
-			<p>Save for later</p>
-		</div>
+		<div class="col-lg-12">
+		<!-- # 1: Survey Demographic Information   -->  
+			<div id="container" style="position: relative; width: 800px; height: 400px;">
+			<script>  
+				geomap();
+			</script>
+			</div> 
+			</div> 
 	 </div> 
+ 
 
 	<h3 style="color:DodgerBlue">AUTOMATION<h3>
+	<h5>Every time when we start a task or try to solve a problem, a few tools might come into mind. For example, during editing geometry, if we know the window-to-wall ratio of a building, instead of drawing the all windows one-by -one, we can directly apply a measure called “"Set Window to Wall Ratio” in Open Studio Legacy to set a specific window-to-wall ratio in just a few seconds. Or, let’s say, if we want to change the lighting power density by reducing 15%, we will think of some approaches such as updating the lighting object through Eppy or applying another measure in the BCL. Let's look at the adoption rate of these tools and the corresponding time saved in our industry. The questions we asked here were what percentage of time that you manually edit and what other tools you utilize in this process.</h5>
 	<hr>
-
+	
 		<h4> 2. The approach(es) you often use for "EDIT GEOMETRY with batch changes" </h4> 	
 	<div class="row"> 
-		<div class = "col-lg-4">	
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		<div class = "col-lg-0">	
+			<p> </p>	
 		</div>	
-		<div class="col-lg-8">
+		<div class="col-lg-12">
 			<div id="chart1">
 			<script>  
 				render("chart1","./data/IBPSA_EditGeo_r2.json");
@@ -97,11 +126,11 @@ footer {
 
 <h4> 3.The approach(es) you often use for “EDIT INPUTS"</h4>
 	<div class="row"> 
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		<div class = "col-lg-0">
+			<p> </p>	
 		</div>	
-		<div class="col-lg-8">
-			<div id="chart2">
+		<div class="col-lg-12">
+			<div id="chart2" style>
 			<script>  
 				render("chart2","./data/IBPSA_EditGeo_r2.json");
 			</script>
@@ -111,10 +140,10 @@ footer {
 	
 	<h4> 4. The approach(es) you often use for “MODEL VERSION CONTROL/ TRACK CHANGES" </h4>   
 	<div class="row"> 
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		<div class = "col-lg-0">
+			<p> </p>	
 		</div>	
-		<div class="col-lg-8">
+		<div class="col-lg-12">
 			<div id="chart3">
 			<script>  
 				render("chart3","./data/IBPSA_EditGeo_r2.json");
@@ -125,10 +154,10 @@ footer {
 	
 		<h4> 5. The approach(es) you often use for "PARAMETRIC ANALYSIS" </h4>   
 	<div class="row"> 
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		<div class = "col-lg-0">
+			<p>  </p>	
 		</div>	
-		<div class="col-lg-8">
+		<div class="col-lg-12">
 			<div id="chart4">
 			<script>  
 				render("chart4","./data/IBPSA_EditGeo_r2.json");
@@ -139,10 +168,10 @@ footer {
 
 		<h4> 6. The approach(es) you often use for “PRESENTATION/ DATA VISUALIZATION"  </h4>   
 	<div class="row"> 
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		<div class = "col-lg-0">
+			<p> </p>	
 		</div>	
-		<div class="col-lg-8">
+		<div class="col-lg-12">
 			<div id="chart5">
 			<script>  
 				render("chart5","./data/IBPSA_EditGeo_r2.json");
@@ -152,26 +181,63 @@ footer {
 	</div>	
 
 		<h3 style="color:DodgerBlue">SCRIPTING AND PROGRAMMING ­- Is it already part of your workflow? </h3>
+		<h5>After seeing the results, you might be curious about what exactly the programming languages that people are using to write their scripts, and what do they do with them? 
+This radar chart shows the programming languages that professions in our industry currently use and plan to learn.</h5>
 		<hr>
 		
-		<h4> 7. What languages you are currently using, and what languages you plan to learn?</h4>   
+		<h4> 7 What languages do you plan to learn or advance your knowledge or skills on scripting/programming in the next 10 years??</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-4">
+		<div class = "col-lg-12">
 			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
 		</div>	
-		<div class="col-lg-8">
-			<p>Save for later</p>
+		<div class="col-lg-4">
+			<div id="chart30">
+				<script>  
+					render_radar("chart30","./data/language_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart31">
+				<script>  
+					render_radar("chart31","./data/language_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart32">
+				<script>  
+					render_radar("chart32","./data/language_d.json");
+				</script>
+			</div> 
 		</div> 
 	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart33">
+				<script>  
+					render_radar("chart33","./data/language_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart34">
+				<script>  
+					render_radar("chart34","./data/language_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+
 
 		<h4> 8. What inspired you or what would let you to script and/ or write your own measures? ?</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		<div class = "col-lg-0">
+			<p> </p>	
 		</div>	
-		<div class="col-lg-8">
+		<div class="col-lg-12">
 			<div id="chart"></div>
 				<script type="text/javascript" src="./data/radarchart_data.js"></script>
 			</div> 
@@ -181,11 +247,45 @@ footer {
 		<h4> 9. Pathways to Learn Tools and Resources</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-4">
+		<div class = "col-lg-12">
 			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
 		</div>	
-		<div class="col-lg-8">
-			<p>Save for later</p>
+		<div class="col-lg-4">
+			<div id="chart35">
+				<script>  
+					render_radar("chart35","./data/learning_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart36">
+				<script>  
+					render_radar("chart36","./data/learning_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart37">
+				<script>  
+					render_radar("chart37","./data/learning_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart38">
+				<script>  
+					render_radar("chart38","./data/learning_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart39">
+				<script>  
+					render_radar("chart39","./data/learning_f.json");
+				</script>
+			</div> 
 		</div> 
 	</div>
 
@@ -196,33 +296,133 @@ footer {
 		<h4> 10. What are the top 3 barriers after you learn scripting or programming?</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-4">
+		<div class = "col-lg-12">
 			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
 		</div>	
-		<div class="col-lg-8">
-			<p>Save for later</p>
+		<div class="col-lg-4">
+			<div id="chart16">
+				<script>  
+					render_radar("chart16","./data/3barriers_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart17">
+				<script>  
+					render_radar("chart17","./data/3barriers_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart18">
+				<script>  
+					render_radar("chart18","./data/3barriers_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart19">
+				<script>  
+					render_radar("chart19","./data/3barriers_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart20">
+				<script>  
+					render_radar("chart20","./data/3barriers_f.json");
+				</script>
+			</div> 
 		</div> 
 	</div>
 
 		<h4> 11. What are the top 3 gains after you learn scripting or programming?</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-4">
+		<div class = "col-lg-12">
 			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
 		</div>	
-		<div class="col-lg-8">
-			<p>Save for later</p>
+		<div class="col-lg-4">
+			<div id="chart15">
+				<script>  
+					render_radar("chart15","./data/3gains_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart11">
+				<script>  
+					render_radar("chart11","./data/3gains_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart12">
+				<script>  
+					render_radar("chart12","./data/3gains_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart13">
+				<script>  
+					render_radar("chart13","./data/3gains_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart14">
+				<script>  
+					render_radar("chart14","./data/3gains_f.json");
+				</script>
+			</div> 
 		</div> 
 	</div>
 
 		<h4> 12. What do you think the role of an energy modeller would be in 10 years?</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-4">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-		</div>	
-		<div class="col-lg-8">
-			<p>Save for later</p>
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>		
+		<div class="col-lg-4">
+			<div id="chart6">
+				<script>  
+					render_radar("chart6","./data/role_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart7">
+				<script>  
+					render_radar("chart7","./data/role_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart8">
+				<script>  
+					render_radar("chart8","./data/role_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart9">
+				<script>  
+					render_radar("chart9","./data/role_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart10">
+				<script>  
+					render_radar("chart10","./data/role_f.json");
+				</script>
+			</div> 
 		</div> 
 	</div>
 	
@@ -262,6 +462,7 @@ footer {
 			<p>Save for later</p>
 		</div> 
 	</div>
+	
 	
 <!-- footer -->
 <footer class="footer">
