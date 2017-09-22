@@ -1,0 +1,13 @@
+[
+    [
+      {"area": "python", "value": 35}, 
+      {"area": "ruby", "value": 9}, 
+      {"area": "C#", "value": 6},  
+      {"area": "C/C++", "value": 12},  
+      {"area": "Bash/Shell", "value": 3},
+      {"area": "Javascript", "value": 9},
+      {"area": "SQL", "value": 12},
+      {"area": "R", "value":15}
+  	]
+      
+  ]

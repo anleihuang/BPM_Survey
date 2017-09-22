@@ -1,0 +1,10 @@
+[
+    [
+      {"area": "not interested", "value": 17}, 
+      {"area": "attending conferences", "value": 0}, 
+      {"area": "attending hackathons", "value": 0},  
+      {"area": "working on projects", "value": 67},  
+      {"area": "meetups", "value": 0},
+      {"area": "(online)courses", "value": 17}
+  	]
+  ]

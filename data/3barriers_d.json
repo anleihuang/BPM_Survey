@@ -1,0 +1,10 @@
+[
+    [
+      {"area": "cannot identify if code is correct", "value": 7}, 
+      {"area": "lack of open sources", "value": 33},
+      {"area": "lack of learning resouces", "value": 33}, 
+      {"area": "lack of support from company", "value": 17},  
+      {"area": "don't know how to start", "value": 5},  
+      {"area": "do not have benefits", "value": 5}
+  	]
+  ]
