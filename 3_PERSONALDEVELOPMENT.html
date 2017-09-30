@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Building Performance Automation Survey (2017.06.16)</title>
+
+<!-- load css -->
+<link rel="stylesheet" href="./lib/CSS/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/CSS/style.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/pure-min.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/radar-chart.css" type="text.css"</link>
+
+<!-- load javascript libraries -->
+<script src="./lib/jquery-2.2.4.min.js"></script>
+<script src="./lib/bootstrap.min.js"></script>
+<script src="./lib/d3.min.js"></script>
+
+<!-- Load sankey libraries -->
+<script src="./lib/render.js"></script>
+<script src="./lib/sankey.js"></script>  
+
+<!-- Load radar chart libraries -->
+<script src="./lib/RadarChart.js"></script> 
+<script src="./lib/render_radar.js"></script>
+
+<!-- Load wrold map libraries -->
+<script src="./lib/topojson.v1.min.js"></script>
+<script src="./lib/world-continents.js"></script>
+<script src="./lib/datamaps.world.min.js"></script>
+<script src="./lib/geomap.js"></script>
+
+
+<style>
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+body {
+    padding-top: 0px;
+    padding-right: 80px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+} 
+
+footer {
+      background-color: #b4e6f7;
+	  position: absolute;
+      bottom: 10;
+      height: 30px;
+	  width: 85%;
+	  margin-bottom: 20px;
+}
+
+#p01 {
+	fontWeight: "bold"
+}
+</style>
+
+<body>
+<!-- header -->
+<header>
+	<nav class="navbar navbar-default navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h1>Building Performance Automation Survey</h1>
+              <p class="lead"> This Survey is conducted by An-Lei Huang and Xing Chen on June 15th, 2017 </p>         
+          </div>
+        </div>
+   </nav>
+</header>   
+<!-- end of header -->
+
+<!-- -->	
+		<h3 style="color:DodgerBlue">PERSONAL DEVELOPMENT ­ How will things change in 10 years?</h3>
+		<hr>
+		
+		<h4> What are the top 3 barriers after you learn scripting or programming?</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-12">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-4">
+			<div id="chart16">
+				<script>  
+					render_radar("chart16","./data/3barriers_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart17">
+				<script>  
+					render_radar("chart17","./data/3barriers_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart18">
+				<script>  
+					render_radar("chart18","./data/3barriers_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart19">
+				<script>  
+					render_radar("chart19","./data/3barriers_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart20">
+				<script>  
+					render_radar("chart20","./data/3barriers_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+
+		<h4> What are the top 3 gains after you learn scripting or programming?</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-12">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-4">
+			<div id="chart15">
+				<script>  
+					render_radar("chart15","./data/3gains_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart11">
+				<script>  
+					render_radar("chart11","./data/3gains_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart12">
+				<script>  
+					render_radar("chart12","./data/3gains_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart13">
+				<script>  
+					render_radar("chart13","./data/3gains_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart14">
+				<script>  
+					render_radar("chart14","./data/3gains_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+
+		<h4> What do you think the role of an energy modeller would be in 10 years?</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>		
+		<div class="col-lg-4">
+			<div id="chart6">
+				<script>  
+					render_radar("chart6","./data/role_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart7">
+				<script>  
+					render_radar("chart7","./data/role_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart8">
+				<script>  
+					render_radar("chart8","./data/role_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart9">
+				<script>  
+					render_radar("chart9","./data/role_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart10">
+				<script>  
+					render_radar("chart10","./data/role_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+
+<!-- navigation bar -->	
+<ul class="nav">
+      <li><a href="index.html">MAIN</a></li>
+      <li><a href="1_AUTOMATION.html">PART I: AUTOMATION</a></li>
+	  <li><a href="2_SCRIPTINGANDPROGRAMMING.html">PART II: SCRIPTING AND PROGRAMMING</a></li>
+      <li><a href="4_COMPANYSUPPORT.html">PART IV: COMPANY SUPPORT</a></li>
+	  <li><a href="5_RESOURCES.html">PART V: RESOURCES</a></li>
+</ul>
+<!-- end of navigation bar -->	
+
+<!-- footer -->
+<footer class="footer">
+      <div class="container-fluid">
+        <p>If you have any questions, please feel free to contact An-Lei Huang (anery817@gmail.com) and Xing Chen (xchen.la@gmail.com).</p>
+      </div>
+</footer> 
+<!-- end of footer --> 		
+	
+</body>
+</html>

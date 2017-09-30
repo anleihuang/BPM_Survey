@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Building Performance Automation Survey (2017.06.16)</title>
+
+<!-- load css -->
+<link rel="stylesheet" href="./lib/CSS/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/CSS/style.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/pure-min.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/radar-chart.css" type="text.css"</link>
+
+<!-- load javascript libraries -->
+<script src="./lib/jquery-2.2.4.min.js"></script>
+<script src="./lib/bootstrap.min.js"></script>
+<script src="./lib/d3.min.js"></script>
+
+
+<!-- Load sankey libraries -->
+<script src="./lib/render.js"></script>
+<script src="./lib/sankey.js"></script>  
+
+<!-- Load radar chart libraries -->
+<script src="./lib/RadarChart.js"></script> 
+<script src="./lib/render_radar.js"></script>
+
+<!-- Load wrold map libraries -->
+<script src="./lib/topojson.v1.min.js"></script>
+<script src="./lib/world-continents.js"></script>
+<script src="./lib/datamaps.world.min.js"></script>
+<script src="./lib/geomap.js"></script>
+
+
+<style>
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+body {
+    padding-top: 0px;
+    padding-right: 80px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+} 
+
+footer {
+      background-color: #b4e6f7;
+	  position: absolute;
+      bottom: 10;
+      height: 30px;
+	  width: 85%;
+	  margin-bottom: 20px;
+}
+
+#p01 {
+	fontWeight: "bold"
+}
+</style>
+
+
+<body>
+<!-- header -->
+<header>
+	<nav class="navbar navbar-default navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h1>Building Performance Automation Survey</h1>
+              <p class="lead"> This Survey is conducted by An-Lei Huang and Xing Chen on June 15th, 2017 </p>         
+          </div>
+        </div>
+   </nav>
+</header>   
+<!-- end of header -->
+
+	<h3 style="color:DodgerBlue">AUTOMATION<h3>
+	<h5>Every time when we start a task or try to solve a problem, a few tools might come into mind. For example, during editing geometry, if we know the window-to-wall ratio of a building, instead of drawing the all windows one-by -one, we can directly apply a measure called “"Set Window to Wall Ratio” in Open Studio Legacy to set a specific window-to-wall ratio in just a few seconds. Or, let’s say, if we want to change the lighting power density by reducing 15%, we will think of some approaches such as updating the lighting object through Eppy or applying another measure in the BCL. Let's look at the adoption rate of these tools and the corresponding time saved in our industry. The questions we asked here were what percentage of time that you manually edit and what other tools you utilize in this process.</h5>
+	<hr>
+	
+		<h4> The approach(es) you often use for "EDIT GEOMETRY with batch changes" </h4> 	
+	<div class="row"> 
+		<div class = "col-lg-0">	
+			<p> </p>	
+		</div>	
+		<div class="col-lg-12">
+			<div id="chart1">
+			<script>  
+				render("chart1","./data/IBPSA_EditGeo.csv");
+			</script>
+			</div> 
+		</div>
+	 </div> 
+
+<h4> The approach(es) you often use for “EDIT INPUTS"</h4>
+	<div class="row"> 
+		<div class = "col-lg-0">
+			<p> </p>	
+		</div>	
+		<div class="col-lg-12">
+			<div id="chart2" style>
+			<script>  
+				render("chart2","./data/IBPSA_EditInput.csv");
+			</script>
+			</div> 
+		</div> 
+	</div>
+	
+	<h4> The approach(es) you often use for “MODEL VERSION CONTROL/ TRACK CHANGES" </h4>   
+	<div class="row"> 
+		<div class = "col-lg-0">
+			<p> </p>	
+		</div>	
+		<div class="col-lg-12">
+			<div id="chart3">
+			<script>  
+				render("chart3","./data/IBPSA_EditGeo.csv");
+			</script>
+			</div> 
+		</div> 
+	</div>
+	
+		<h4> The approach(es) you often use for "PARAMETRIC ANALYSIS" </h4>   
+	<div class="row"> 
+		<div class = "col-lg-0">
+			<p>  </p>	
+		</div>	
+		<div class="col-lg-12">
+			<div id="chart4">
+			<script>  
+				render("chart4","./data/IBPSA_Par.csv");
+			</script>
+			</div> 
+		</div> 
+	</div>
+
+		<h4> The approach(es) you often use for “PRESENTATION/ DATA VISUALIZATION"  </h4>   
+	<div class="row"> 
+		<div class = "col-lg-0">
+			<p> </p>	
+		</div>	
+		<div class="col-lg-12">
+			<div id="chart5">
+			<script>  
+				render("chart5","./data/IBPSA_DataViz.csv");
+			</script>
+			</div> 
+		</div> 
+	</div>	
+
+<!-- navigation bar -->	
+<ul class="nav">
+      <li><a href="index.html">MAIN</a></li>
+	  <li><a href="2_SCRIPTINGANDPROGRAMMING.html">PART II: SCRIPTING AND PROGRAMMING</a></li>
+      <li><a href="3_PERSONALDEVELOPMENT.html">PART III: PERSONAL DEVELOPMENT</a></li>
+      <li><a href="4_COMPANYSUPPORT.html">PART IV: COMPANY SUPPORT</a></li>
+	  <li><a href="5_RESOURCES.html">PART V: RESOURCES</a></li>
+</ul>
+<!-- end of navigation bar -->	
+
+<!-- footer -->
+<footer class="footer">
+      <div class="container-fluid">
+        <p>If you have any questions, please feel free to contact An-Lei Huang (anery817@gmail.com) and Xing Chen (xchen.la@gmail.com).</p>
+      </div>
+</footer> 
+<!-- end of footer --> 
+	
+</body>
+</html>

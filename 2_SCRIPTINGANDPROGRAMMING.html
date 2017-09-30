@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Building Performance Automation Survey (2017.06.16)</title>
+
+<!-- load css -->
+<link rel="stylesheet" href="./lib/CSS/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/CSS/style.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/pure-min.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/radar-chart.css" type="text.css"</link>
+
+<!-- load javascript libraries -->
+<script src="./lib/jquery-2.2.4.min.js"></script>
+<script src="./lib/bootstrap.min.js"></script>
+<script src="./lib/d3.min.js"></script>
+
+<!-- Load sankey libraries -->
+<script src="./lib/render.js"></script>
+<script src="./lib/sankey.js"></script>  
+
+<!-- Load radar chart libraries -->
+<script src="./lib/RadarChart.js"></script> 
+<script src="./lib/render_radar.js"></script>
+
+<!-- Load wrold map libraries -->
+<script src="./lib/topojson.v1.min.js"></script>
+<script src="./lib/world-continents.js"></script>
+<script src="./lib/datamaps.world.min.js"></script>
+<script src="./lib/geomap.js"></script>
+
+
+<style>
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+body {
+    padding-top: 0px;
+    padding-right: 80px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+} 
+
+footer {
+      background-color: #b4e6f7;
+	  position: absolute;
+      bottom: 10;
+      height: 30px;
+	  width: 85%;
+	  margin-bottom: 20px;
+}
+
+#p01 {
+	fontWeight: "bold"
+}
+</style>
+<body>
+<!-- header -->
+<header>
+	<nav class="navbar navbar-default navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h1>Building Performance Automation Survey</h1>
+              <p class="lead"> This Survey is conducted by An-Lei Huang and Xing Chen on June 15th, 2017 </p>         
+          </div>
+        </div>
+   </nav>
+</header>   
+<!-- end of header -->
+
+
+		<h3 style="color:DodgerBlue">SCRIPTING AND PROGRAMMING ­- Is it already part of your workflow? </h3>
+		<h5>After seeing the results, you might be curious about what exactly the programming languages that people are using to write their scripts, and what do they do with them? 
+This radar chart shows the programming languages that professions in our industry currently use and plan to learn.</h5>
+		<hr>
+		
+		<h4> What languages do you plan to learn or advance your knowledge or skills on scripting/programming in the next 10 years??</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-12">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-4">
+			<div id="chart30">
+				<script>  
+					render_radar("chart30","./data/language_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart31">
+				<script>  
+					render_radar("chart31","./data/language_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart32">
+				<script>  
+					render_radar("chart32","./data/language_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart33">
+				<script>  
+					render_radar("chart33","./data/language_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart34">
+				<script>  
+					render_radar("chart34","./data/language_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+
+
+		<h4> What inspired you or what would let you to script and/ or write your own measures? ?</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-0">
+			<p> </p>	
+		</div>	
+		<div class="col-lg-12">
+			<div id="chart40"></div>
+				<script>  
+					render_radar("chart40","./data/inspired.json");
+				</script>
+			</div> 
+		</div> 
+	</div>	
+
+		<h4> Pathways to Learn Tools and Resources</h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-12">
+			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
+		</div>	
+		<div class="col-lg-4">
+			<div id="chart35">
+				<script>  
+					render_radar("chart35","./data/learning_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart36">
+				<script>  
+					render_radar("chart36","./data/learning_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart37">
+				<script>  
+					render_radar("chart37","./data/learning_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart38">
+				<script>  
+					render_radar("chart38","./data/learning_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart39">
+				<script>  
+					render_radar("chart39","./data/learning_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+
+<!-- navigation bar -->	
+<ul class="nav">
+      <li><a href="index.html">MAIN</a></li>
+      <li><a href="1_AUTOMATION.html">PART I: AUTOMATION</a></li>
+      <li><a href="3_PERSONALDEVELOPMENT.html">PART III: PERSONAL DEVELOPMENT</a></li>
+      <li><a href="4_COMPANYSUPPORT.html">PART IV: COMPANY SUPPORT</a></li>
+	  <li><a href="5_RESOURCES.html">PART V: RESOURCES</a></li>
+</ul>
+<!-- end of navigation bar -->	
+
+<!-- footer -->
+<footer class="footer">
+      <div class="container-fluid">
+        <p>If you have any questions, please feel free to contact An-Lei Huang (anery817@gmail.com) and Xing Chen (xchen.la@gmail.com).</p>
+      </div>
+</footer> 
+<!-- end of footer --> 	
+</body>
+</html>
