@@ -1,0 +1,109 @@
+name,source,target,value
+Architect,Architect,< 1,0
+Energy modeler,Architect,1 to 2,3
+Mechanical engineer,Architect,3  to 5,0
+Academic professional,Architect,6 to 10,1
+Software developer,Architect,11  to 15,0
+Energy services / mechanical contractor,Architect,16 or more,1
+Building physicist,Energy modeler,< 1,1
+Electrical engineer,Energy modeler,1 to 2,10
+"Architect, software developer, energy modeler",Energy modeler,3  to 5,21
+< 1,Energy modeler,6 to 10,21
+1 to 2,Energy modeler,11  to 15,5
+3  to 5,Energy modeler,16 or more,3
+6 to 10,Mechanical engineer,< 1,0
+11  to 15,Mechanical engineer,1 to 2,0
+16 or more,Mechanical engineer,3  to 5,1
+Embedded features in proprietary tools,Mechanical engineer,6 to 10,0
+Design Explorer,Mechanical engineer,11  to 15,1
+EXCEL Spreadsheet,Mechanical engineer,16 or more,4
+EXCEL VBA,Academic professional,< 1,0
+Ladybug/ Honeybee,Academic professional,1 to 2,3
+R,Academic professional,3  to 5,1
+Paraview,Academic professional,6 to 10,8
+DIVA,Academic professional,11  to 15,4
+Write custom script,Academic professional,16 or more,3
+,Software developer,< 1,0
+,Software developer,1 to 2,0
+,Software developer,3  to 5,0
+,Software developer,6 to 10,3
+,Software developer,11  to 15,0
+,Software developer,16 or more,0
+,Energy services / mechanical contractor,< 1,0
+,Energy services / mechanical contractor,1 to 2,0
+,Energy services / mechanical contractor,3  to 5,0
+,Energy services / mechanical contractor,6 to 10,0
+,Energy services / mechanical contractor,11  to 15,0
+,Energy services / mechanical contractor,16 or more,1
+,Building physicist,< 1,0
+,Building physicist,1 to 2,0
+,Building physicist,3  to 5,0
+,Building physicist,6 to 10,0
+,Building physicist,11  to 15,1
+,Building physicist,16 or more,0
+,Electrical engineer,< 1,0
+,Electrical engineer,1 to 2,1
+,Electrical engineer,3  to 5,0
+,Electrical engineer,6 to 10,0
+,Electrical engineer,11  to 15,0
+,Electrical engineer,16 or more,0
+,"Architect, software developer, energy modeler",< 1,0
+,"Architect, software developer, energy modeler",1 to 2,0
+,"Architect, software developer, energy modeler",3  to 5,0
+,"Architect, software developer, energy modeler",6 to 10,0
+,"Architect, software developer, energy modeler",11  to 15,1
+,"Architect, software developer, energy modeler",16 or more,0
+,< 1,Embedded features in proprietary tools,1
+,< 1,Design Explorer,0
+,< 1,EXCEL Spreadsheet,1
+,< 1,EXCEL VBA,0
+,< 1,Ladybug/ Honeybee,0
+,< 1,R,0
+,< 1,Paraview,0
+,< 1,DIVA,0
+,< 1,Write custom script,1
+,1 to 2,Embedded features in proprietary tools,2
+,1 to 2,Design Explorer,0
+,1 to 2,EXCEL Spreadsheet,8
+,1 to 2,EXCEL VBA,1
+,1 to 2,Ladybug/ Honeybee,3
+,1 to 2,R,0
+,1 to 2,Paraview,0
+,1 to 2,DIVA,0
+,1 to 2,Write custom script,1
+,3  to 5,Embedded features in proprietary tools,2
+,3  to 5,Design Explorer,1
+,3  to 5,EXCEL Spreadsheet,10
+,3  to 5,EXCEL VBA,3
+,3  to 5,Ladybug/ Honeybee,4
+,3  to 5,R,0
+,3  to 5,Paraview,0
+,3  to 5,DIVA,1
+,3  to 5,Write custom script,6
+,6 to 10,Embedded features in proprietary tools,8
+,6 to 10,Design Explorer,0
+,6 to 10,EXCEL Spreadsheet,13
+,6 to 10,EXCEL VBA,3
+,6 to 10,Ladybug/ Honeybee,3
+,6 to 10,R,1
+,6 to 10,Paraview,0
+,6 to 10,DIVA,0
+,6 to 10,Write custom script,5
+,11  to 15,Embedded features in proprietary tools,3
+,11  to 15,Design Explorer,1
+,11  to 15,EXCEL Spreadsheet,5
+,11  to 15,EXCEL VBA,2
+,11  to 15,Ladybug/ Honeybee,2
+,11  to 15,R,0
+,11  to 15,Paraview,1
+,11  to 15,DIVA,0
+,11  to 15,Write custom script,2
+,16 or more,Embedded features in proprietary tools,2
+,16 or more,Design Explorer,0
+,16 or more,EXCEL Spreadsheet,4
+,16 or more,EXCEL VBA,1
+,16 or more,Ladybug/ Honeybee,0
+,16 or more,R,0
+,16 or more,Paraview,0
+,16 or more,DIVA,0
+,16 or more,Write custom script,1

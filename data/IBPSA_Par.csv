@@ -1,0 +1,115 @@
+name,source,target,value
+Architect,Architect,< 1,0
+Energy modeler,Architect,1 to 2,3
+Mechanical engineer,Architect,3  to 5,0
+Academic professional,Architect,6 to 10,1
+Software developer,Architect,11  to 15,0
+Energy services / mechanical contractor,Architect,16 or more,1
+Building physicist,Energy modeler,< 1,1
+Electrical engineer,Energy modeler,1 to 2,10
+"Architect, software developer, energy modeler",Energy modeler,3  to 5,21
+< 1,Energy modeler,6 to 10,21
+1 to 2,Energy modeler,11  to 15,5
+3  to 5,Energy modeler,16 or more,3
+6 to 10,Mechanical engineer,< 1,0
+11  to 15,Mechanical engineer,1 to 2,0
+16 or more,Mechanical engineer,3  to 5,1
+Time < 40%,Mechanical engineer,6 to 10,0
+40% =< Time =< 80%,Mechanical engineer,11  to 15,1
+Time > 80%,Mechanical engineer,16 or more,4
+Not specified,Academic professional,< 1,0
+Embedded features in proprietary tools,Academic professional,1 to 2,3
+Ladybug/ Honeybee,Academic professional,3  to 5,1
+OS PAT,Academic professional,6 to 10,8
+Eppy,Academic professional,11  to 15,4
+Params,Academic professional,16 or more,3
+EP-Macro,Software developer,< 1,0
+JEPlus,Software developer,1 to 2,0
+DIVA,Software developer,3  to 5,0
+Write custom script,Software developer,6 to 10,3
+,Software developer,11  to 15,0
+,Software developer,16 or more,0
+,Energy services / mechanical contractor,< 1,0
+,Energy services / mechanical contractor,1 to 2,0
+,Energy services / mechanical contractor,3  to 5,0
+,Energy services / mechanical contractor,6 to 10,0
+,Energy services / mechanical contractor,11  to 15,0
+,Energy services / mechanical contractor,16 or more,1
+,Building physicist,< 1,0
+,Building physicist,1 to 2,0
+,Building physicist,3  to 5,0
+,Building physicist,6 to 10,0
+,Building physicist,11  to 15,1
+,Building physicist,16 or more,0
+,Electrical engineer,< 1,0
+,Electrical engineer,1 to 2,1
+,Electrical engineer,3  to 5,0
+,Electrical engineer,6 to 10,0
+,Electrical engineer,11  to 15,0
+,Electrical engineer,16 or more,0
+,"Architect, software developer, energy modeler",< 1,0
+,"Architect, software developer, energy modeler",1 to 2,0
+,"Architect, software developer, energy modeler",3  to 5,0
+,"Architect, software developer, energy modeler",6 to 10,0
+,"Architect, software developer, energy modeler",11  to 15,1
+,"Architect, software developer, energy modeler",16 or more,0
+,< 1,Time < 40%,1
+,< 1,40% =< Time =< 80%,0
+,< 1,Time > 80%,0
+,1 to 2,Time < 40%,4
+,1 to 2,40% =< Time =< 80%,5
+,1 to 2,Time > 80%,3
+,3  to 5,Time < 40%,3
+,3  to 5,40% =< Time =< 80%,5
+,3  to 5,Time > 80%,5
+,6 to 10,Time < 40%,8
+,6 to 10,40% =< Time =< 80%,1
+,6 to 10,Time > 80%,4
+,11  to 15,Time < 40%,4
+,11  to 15,40% =< Time =< 80%,1
+,11  to 15,Time > 80%,0
+,16 or more,Time < 40%,5
+,16 or more,40% =< Time =< 80%,4
+,16 or more,Time > 80%,1
+,< 1,Not specified,0
+,1 to 2,Not specified,4
+,3  to 5,Not specified,10
+,6 to 10,Not specified,19
+,11  to 15,Not specified,8
+,16 or more,Not specified,1
+,Time < 40%,Embedded features in proprietary tools,7
+,Time < 40%,Ladybug/ Honeybee,3
+,Time < 40%,OS PAT,2
+,Time < 40%,Eppy,1
+,Time < 40%,Params,1
+,Time < 40%,EP-Macro,1
+,Time < 40%,JEPlus,0
+,Time < 40%,DIVA,0
+,Time < 40%,Write custom script,9
+,40% =< Time =< 80%,Embedded features in proprietary tools,6
+,40% =< Time =< 80%,Ladybug/ Honeybee,3
+,40% =< Time =< 80%,OS PAT,2
+,40% =< Time =< 80%,Eppy,1
+,40% =< Time =< 80%,Params,0
+,40% =< Time =< 80%,EP-Macro,0
+,40% =< Time =< 80%,JEPlus,0
+,40% =< Time =< 80%,DIVA,0
+,40% =< Time =< 80%,Write custom script,2
+,Time > 80%,Embedded features in proprietary tools,0
+,Time > 80%,Ladybug/ Honeybee,1
+,Time > 80%,OS PAT,0
+,Time > 80%,Eppy,0
+,Time > 80%,Params,0
+,Time > 80%,EP-Macro,0
+,Time > 80%,JEPlus,0
+,Time > 80%,DIVA,0
+,Time > 80%,Write custom script,0
+,Not specified,Embedded features in proprietary tools,10
+,Not specified,Ladybug/ Honeybee,12
+,Not specified,OS PAT,8
+,Not specified,Eppy,2
+,Not specified,Params,0
+,Not specified,EP-Macro,5
+,Not specified,JEPlus,6
+,Not specified,DIVA,1
+,Not specified,Write custom script,14
