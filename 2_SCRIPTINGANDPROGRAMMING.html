@@ -51,8 +51,37 @@ footer {
 	  margin-bottom: 20px;
 }
 
-#p01 {
-	fontWeight: "bold"
+.toolTip {
+  pointer-events: none;
+	position: absolute;
+    display: none;
+  min-width: 50px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  padding: 9px 14px 6px 14px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 1.3;
+  color: #5B6770;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, .15);
+}
+
+.toolTip:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid white;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -12px;
+}  
+
+.toolTip span {
+	font-weight: 500;
+  color: #081F2C;
 }
 </style>
 <body>
@@ -79,10 +108,10 @@ This radar chart shows the programming languages that professions in our industr
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
 		<div class = "col-lg-12">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
 		</div>	
 		<div class="col-lg-4">
 			<div id="chart30">
+				<p style="color:#ff7f0e"> < 2 years </p>
 				<script>  
 					render_radar("chart30","./data/language_b.json");
 				</script>
@@ -90,6 +119,7 @@ This radar chart shows the programming languages that professions in our industr
 		</div> 
 				<div class="col-lg-4">
 			<div id="chart31">
+				<p style="color:#6F257F"> 3-5 years </p>
 				<script>  
 					render_radar("chart31","./data/language_c.json");
 				</script>
@@ -97,6 +127,7 @@ This radar chart shows the programming languages that professions in our industr
 		</div> 
 				<div class="col-lg-4">
 			<div id="chart32">
+				<p style="color:#bcbd22";> 6-10 years </p>
 				<script>  
 					render_radar("chart32","./data/language_d.json");
 				</script>
@@ -106,6 +137,7 @@ This radar chart shows the programming languages that professions in our industr
 	<div class="row">
 				<div class="col-lg-4">
 			<div id="chart33">
+				<p style="color:#CA0D59"> 11-15 years </p>
 				<script>  
 					render_radar("chart33","./data/language_e.json");
 				</script>
@@ -113,6 +145,7 @@ This radar chart shows the programming languages that professions in our industr
 		</div> 
 				<div class="col-lg-4">
 			<div id="chart34">
+				<p style="color:#2ca02c"> >=16 years </p>
 				<script>  
 					render_radar("chart34","./data/language_f.json");
 				</script>
@@ -120,65 +153,43 @@ This radar chart shows the programming languages that professions in our industr
 		</div> 
 	</div>
 
-
-		<h4> What inspired you or what would let you to script and/ or write your own measures? ?</h4>   
+	<div class="row"></div>
+	
+		<h4> What inspired you or what would let you to script and/ or write your own measures? </h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-0">
-			<p> </p>	
-		</div>	
-		<div class="col-lg-12">
+		<div class="col-lg-4">
 			<div id="chart40"></div>
 				<script>  
-					render_radar("chart40","./data/inspired.json");
+					render_radar("chart40","./data/measures.json");
 				</script>
 			</div> 
+		<div class = "col-lg-8">
+			<p> 
+			<br>
+			<br>
+			<b>Model Version Control:</b> GIT, Bitbucket <br>
+			<b>Batch Processing:</b>Java, Python, Ruby, Bash, Shell <br>
+			<b>Data visualization:</b> Data analysis: R, Python ; Data processing: Python, Ruby ; 
+                                       Visualization: Javascript (d3.js) <br>
+
+			<b>Parametric analysis:</b>Java, Python, Ruby, Bash, Shell<br>
+			<b>Need new features that are not currently available:</b>OS Measure: Ruby <br>
+			<b>Easy to make specific changes to multiple files:</b> Ruby, Python, Excel VBA <br>
+			<b>Streamline process (build templates/ libraries):</b> Ruby, Python, Excel VBA, SQL
+		</p>	
+		</div>	
 		</div> 
 	</div>	
+	
+	<div class="row"></div>
 
 		<h4> Pathways to Learn Tools and Resources</h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
 		<div class = "col-lg-12">
-			<p> Descrption: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>	
-		</div>	
-		<div class="col-lg-4">
-			<div id="chart35">
-				<script>  
-					render_radar("chart35","./data/learning_b.json");
-				</script>
-			</div> 
-		</div> 
-				<div class="col-lg-4">
-			<div id="chart36">
-				<script>  
-					render_radar("chart36","./data/learning_c.json");
-				</script>
-			</div> 
-		</div> 
-				<div class="col-lg-4">
-			<div id="chart37">
-				<script>  
-					render_radar("chart37","./data/learning_d.json");
-				</script>
-			</div> 
-		</div> 
-	</div>
-	<div class="row">
-				<div class="col-lg-4">
-			<div id="chart38">
-				<script>  
-					render_radar("chart38","./data/learning_e.json");
-				</script>
-			</div> 
-		</div> 
-				<div class="col-lg-4">
-			<div id="chart39">
-				<script>  
-					render_radar("chart39","./data/learning_f.json");
-				</script>
-			</div> 
-		</div> 
+		<img src="./data/Pathways_to_learn.png" width="800 px" height="400 px">
+		</div>	 
 	</div>
 
 <!-- navigation bar -->	
