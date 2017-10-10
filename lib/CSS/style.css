@@ -4,6 +4,11 @@ p.survey {
     font-size: 1.2em;
 }
 
+h5.survey {
+    line-height: 30px;
+    font-size: 1.2em;
+}
+
 .node rect {
   cursor: move;
   fill-opacity: .9;
