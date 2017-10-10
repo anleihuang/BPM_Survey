@@ -51,19 +51,34 @@ footer {
 	  margin-bottom: 20px;
 }
 
-#p01 {
-	fontWeight: "bold"
+.topnav {
+  background-color: #ececec;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #7c7c7c;
+  text-align: center;
+  text-decoration: none;
+    padding: 10px 16px;
+  font-size: 14px;
+}
+.topnav a:hover {
+  background-color: #e2f7ff;
+  color: black;
 }
 </style>
 
-<body>
 
+<body>
+  
 <!-- header -->
 <header>
 	<nav class="navbar navbar-default navbar-static-top">
           <div class="container-fluid">
             <div class="navbar-header">
-              <h1>Building Performance Automation Survey</h1>
+              <h1>Building Performance Modeling Automation Survey</h1>
               <p class="lead"> This Survey is conducted by An-Lei Huang and Xing Chen on June 15th, 2017 </p>         
           </div>
         </div>
@@ -71,37 +86,39 @@ footer {
 </header>   
 <!-- end of header -->
 
+<!-- navigation bar -->	
+<div class="topnav">
+	<a href="index.html">MAIN</a>
+      	<a href="1_AUTOMATION.html">PART I: AUTOMATION</a>
+	<a href="2_SCRIPTINGANDPROGRAMMING.html">PART II: SCRIPTING AND PROGRAMMING</a>
+      	<a href="3_PERSONALDEVELOPMENT.html">PART III: PERSONAL DEVELOPMENT</a>
+      	<a href="4_COMPANYSUPPORT.html">PART IV: COMPANY SUPPORT</a>
+	<a href="5_RESOURCES.html">PART V: RESOURCES</a>
+</div> 
+<!-- end of navigation bar -->		
+
 <!-- -->
 		<h3 style="color:DodgerBlue">RESOURCES</h3>
 		<hr>
-		<P><a href="http://www.ibpsa.org/"> International Building Performance Simulation Association (IBPSA) </a></P>
-		<P><a href="https://www.ibpsa.us/"> The United States Regional Affiliate of IBPSA (IBPSA-USA) </P>
-		<P><a href="https://www.ibpsa.us/chapter/san-francisco/"> San Francisco Bay Area Chapter page for IBPSA-USA (IBPSA-USA SFBA) </P>
-		<P><a href="https://unmethours.com/questions/"> Unmet Hours </a></P>
-		<P><a href="http://pythonhosted.org/eppy/index.html"> eppy’s documentation </a></P>
-		<P><a href="http://d3js.org/"> D3.js </a></P>
+		<P class="survey"><a href="http://www.ibpsa.org/"> International Building Performance Simulation Association (IBPSA) </a></P>
+		<P class="survey"><a href="https://www.ibpsa.us/"> The United States Regional Affiliate of IBPSA (IBPSA-USA) </P>
+		<P class="survey"><a href="https://www.ibpsa.us/chapter/san-francisco/"> San Francisco Bay Area Chapter page for IBPSA-USA (IBPSA-USA SFBA) </P>
+		<P class="survey"><a href="https://unmethours.com/questions/"> Unmet Hours </a></P>
+		<P class="survey"><a href="http://pythonhosted.org/eppy/index.html"> eppy’s documentation </a></P>
+		<P class="survey"><a href="http://d3js.org/"> D3.js </a></P>
 		
 		<h3 style="color:DodgerBlue">ONLINE RESOURCES</h3>
 		<hr>
-		<P>AAAAAAA</P>
+		<P class="survey"> <a href="https://mdahlhausen.github.io/epwvis/"> An online viewer and analysis tool for EnergyPlus Weather (EPW) files (epwvis) </p>
+		<P class="survey"> <a href="https://www.ibpsa.us/sites/default/files/u2240/IBPSA_SF_July2017_Dahlhausen.pdf"> Open Web Tools and OpenStudio </a> was presented by Matthew Dahlhausen (Integral Group) during the IBPSA-USA San Francisco Chapter July 2017 Event. </P>
 		
 		<h3 style="color:DodgerBlue">ACKNOWLEDGE</h3>
 		<hr>
-		<P>Michael O’Keefe and Peter Ellis. 2016. Model Like A Programmer: Tools And Techniques For Greater Productivity. ASHRAE and IBPSA-USA SimBuild 2016 Building Performance Modeling Conference, Salt Lake City, UT.</P>
-		<P>Peter Ellis. 2016. A Parametric Tool for Community-Scale Modeling. ASHRAE and IBPSA-USA SimBuild 2016 Building Performance Modeling Conference, Salt Lake City, UT.</P>
-		<P>Jason Glazer. 2016. Using Python And Eppy For A Large National Simulation Study. ASHRAE and IBPSA-USA SimBuild 2016 Building Performance Modeling Conference, Salt Lake City, UT.</P>
-		<P>Clayton Miller, Christian Hersberger, and Marcus Jones. 2013. Automation Of Common Building Energy Simulation Workflows Using Python. 13th Conference of International Building Performance Simulation Association, Chambéry, France.</P>
+		<P class="survey">Michael O’Keefe and Peter Ellis. 2016. Model Like A Programmer: Tools And Techniques For Greater Productivity. ASHRAE and IBPSA-USA SimBuild 2016 Building Performance Modeling Conference, Salt Lake City, UT.</P>
+		<P class="survey">Peter Ellis. 2016. A Parametric Tool for Community-Scale Modeling. ASHRAE and IBPSA-USA SimBuild 2016 Building Performance Modeling Conference, Salt Lake City, UT.</P>
+		<P class="survey">Jason Glazer. 2016. Using Python And Eppy For A Large National Simulation Study. ASHRAE and IBPSA-USA SimBuild 2016 Building Performance Modeling Conference, Salt Lake City, UT.</P>
+		<P class="survey">Clayton Miller, Christian Hersberger, and Marcus Jones. 2013. Automation Of Common Building Energy Simulation Workflows Using Python. 13th Conference of International Building Performance Simulation Association, Chambéry, France.</P>
 
-			
-<!-- navigation bar -->	
-<ul class="nav">
-      <li><a href="index.html">MAIN</a></li>
-      <li><a href="1_AUTOMATION.html">PART I: AUTOMATION</a></li>
-	  <li><a href="2_SCRIPTINGANDPROGRAMMING.html">PART II: SCRIPTING AND PROGRAMMING</a></li>
-      <li><a href="3_PERSONALDEVELOPMENT.html">PART III: PERSONAL DEVELOPMENT</a></li>
-      <li><a href="4_COMPANYSUPPORT.html">PART IV: COMPANY SUPPORT</a></li>
-</ul>
-<!-- end of navigation bar -->	
 
 <!-- footer -->
 <footer class="footer">
