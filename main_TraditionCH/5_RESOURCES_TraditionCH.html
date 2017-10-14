@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Building Performance Automation Survey (2017.06.16)</title>
+
+<!-- load css -->
+<link rel="stylesheet" href="./lib/CSS/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/CSS/style.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/pure-min.css" type="text.css"</link>
+<link rel="stylesheet" href="./lib/CSS/radar-chart.css" type="text.css"</link>
+
+<!-- load javascript libraries -->
+<script src="./lib/jquery-2.2.4.min.js"></script>
+<script src="./lib/bootstrap.min.js"></script>
+<script src="./lib/d3.min.js"></script>
+
+<!-- Load sankey libraries -->
+<script src="./lib/render.js"></script>
+<script src="./lib/sankey.js"></script>  
+
+<!-- Load radar chart libraries -->
+<script src="./lib/RadarChart.js"></script> 
+<script src="./lib/render_radar.js"></script>
+
+<!-- Load wrold map libraries -->
+<script src="./lib/topojson.v1.min.js"></script>
+<script src="./lib/world-continents.js"></script>
+<script src="./lib/datamaps.world.min.js"></script>
+<script src="./lib/geomap.js"></script>
+
+
+<style>
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+body {
+    padding-top: 0px;
+    padding-right: 80px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+} 
+footer {
+      background-color: #b4e6f7;
+	  position: absolute;
+      bottom: 10;
+      height: 30px;
+	  width: 85%;
+	  margin-bottom: 20px;
+}
+.topnav {
+  background-color: #ececec;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #7c7c7c;
+  text-align: center;
+  text-decoration: none;
+    padding: 10px 16px;
+  font-size: 14px;
+}
+.topnav a:hover {
+  background-color: #e2f7ff;
+  color: black;
+}
+</style>
+
+
+<body>
+  
+<!-- header -->
+<header>
+	<nav class="navbar navbar-default navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h1>Building Performance Modeling Automation Survey</h1>
+              <p class="lead"> This Survey is conducted by An-Lei Huang and Xing Chen on June 15th, 2017 </p>         
+          </div>
+        </div>
+   </nav>
+</header>   
+<!-- end of header -->
+
+<!-- navigation bar -->	
+<div class="topnav">
+		<a href="./main_TraditionCH/index_TraditionCH.html">首頁</a></li>
+      	<a href="./main_TraditionCH/1_AUTOMATION_TraditionCH.html">PART I: 工作流程自動化</a></li>
+		<a href="./main_TraditionCH/2_SCRIPTINGANDPROGRAMMING_TraditionCH.html">PART II: 編程技能</a>
+      	<a href="./main_TraditionCH/3_PERSONALDEVELOPMENT_TraditionCH.html">PART III: 個人發展</a>
+      	<a href="./main_TraditionCH/4_COMPANYSUPPORT_TraditionCH.html">PART IV: 公司</a>
+		<a href="./main_TraditionCH/5_RESOURCES_TraditionCH.html">PART V: 公司資源</a>
+</div>  
+<!-- end of navigation bar -->	
+
+<!-- language bar -->		
+<div class="container-fluid">  
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="5_RESOURCES.html">English</a></li>
+      <li><a href="./main_TraditionCH/5_RESOURCES_TraditionCH.html">繁體中文</a></li>
+	  <li><a href="index_SimplifiedCH.html">简体中文</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end of language bar -->	
+
+<!-- -->
+		<h3 style="color:DodgerBlue">線上資源</h3>
+		<hr>
+		<p class="survey"><a href="http://www.ibpsa.org/"> International Building Performance Simulation Association (IBPSA) </a></p>
+		<p class="survey"><a href="https://www.ibpsa.us/"> The United States Regional Affiliate of IBPSA (IBPSA-USA) </a></p>
+		<p class="survey"><a href="https://www.ibpsa.us/chapter/san-francisco/"> San Francisco Bay Area Chapter page for IBPSA-USA (IBPSA-USA SFBA) </p>
+		<p class="survey"><a href="https://www.youtube.com/channel/UCY9AD4H9_xKjKRTEvkce_8g">IBPSA University - YouTube </a></p>
+		<p class="survey"><a href="https://unmethours.com/questions/"> Unmet Hours </a></p>
+		<p class="survey"><a href="http://pythonhosted.org/eppy/index.html"> eppy’s documentation </a></p>
+		<p class="survey"><a href="http://www.jeplus.org/wiki/doku.php"> JEPlus - An EnergyPlus simulation manager for parametrics </a><p>
+		<p class="survey"><a href="http://d3js.org/"> D3.js </a></p>
+		
+		<h3 style="color:DodgerBlue">研討會</h3>
+		<hr>
+		<p class="survey"><a href="https://www.ashrae.org/membership--conferences/conferences/ashrae-conferences/2018-ashrae-building-performance-analysis-conference-and-simbuild"> 2018 ASHRAE Building Performance Analysis Conference and SimBuild </a></p>
+		<p class="survey"><a href="http://buildingsimulation2019.org/"> Building Simulation 2019 </a></p>	
+	
+		<h3 style="color:DodgerBlue">線上工具</h3>
+		<hr>
+		<P class="survey"> <a href="https://mdahlhausen.github.io/epwvis/"> An online viewer and analysis tool for EnergyPlus Weather (EPW) files (epwvis) </p>
+		<P class="survey"> <a href="https://www.ibpsa.us/sites/default/files/u2240/IBPSA_SF_July2017_Dahlhausen.pdf"> Open Web Tools and OpenStudio </a> was presented by Matthew Dahlhausen (Integral Group) during the IBPSA-USA San Francisco Chapter July 2017 Event. </P>
+		
+<!-- footer -->
+<footer class="footer">
+      <div class="container-fluid">
+        <p>如有任何疑問，請隨時聯繫黃安蕾（anery817@gmail.com）和陳新（xchen.la@gmail.com）</p>
+      </div>
+</footer> 
+<!-- end of footer --> 		
+</body>
+</html>
