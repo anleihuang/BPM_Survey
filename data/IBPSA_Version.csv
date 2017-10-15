@@ -1,0 +1,73 @@
+name,source,target,value
+Architect,Architect,< 1,0
+Energy modeler,Architect,1 to 2,3
+Mechanical engineer,Architect,3  to 5,0
+Academic professional,Architect,6 to 10,1
+Software developer,Architect,11  to 15,0
+Energy services / mechanical contractor,Architect,16 or more,1
+Building physicist,Energy modeler,< 1,1
+Electrical engineer,Energy modeler,1 to 2,10
+"Architect, software developer, energy modeler",Energy modeler,3  to 5,21
+< 1,Energy modeler,6 to 10,21
+1 to 2,Energy modeler,11  to 15,5
+3  to 5,Energy modeler,16 or more,3
+6 to 10,Mechanical engineer,< 1,0
+11  to 15,Mechanical engineer,1 to 2,0
+16 or more,Mechanical engineer,3  to 5,1
+Manually create and document file names,Mechanical engineer,6 to 10,0
+GIT,Mechanical engineer,11  to 15,1
+Other,Mechanical engineer,16 or more,4
+,Academic professional,< 1,0
+,Academic professional,1 to 2,3
+,Academic professional,3  to 5,1
+,Academic professional,6 to 10,8
+,Academic professional,11  to 15,4
+,Academic professional,16 or more,3
+,Software developer,< 1,0
+,Software developer,1 to 2,0
+,Software developer,3  to 5,0
+,Software developer,6 to 10,3
+,Software developer,11  to 15,0
+,Software developer,16 or more,0
+,Energy services / mechanical contractor,< 1,0
+,Energy services / mechanical contractor,1 to 2,0
+,Energy services / mechanical contractor,3  to 5,0
+,Energy services / mechanical contractor,6 to 10,0
+,Energy services / mechanical contractor,11  to 15,0
+,Energy services / mechanical contractor,16 or more,1
+,Building physicist,< 1,0
+,Building physicist,1 to 2,0
+,Building physicist,3  to 5,0
+,Building physicist,6 to 10,0
+,Building physicist,11  to 15,1
+,Building physicist,16 or more,0
+,Electrical engineer,< 1,0
+,Electrical engineer,1 to 2,1
+,Electrical engineer,3  to 5,0
+,Electrical engineer,6 to 10,0
+,Electrical engineer,11  to 15,0
+,Electrical engineer,16 or more,0
+,"Architect, software developer, energy modeler",< 1,0
+,"Architect, software developer, energy modeler",1 to 2,0
+,"Architect, software developer, energy modeler",3  to 5,0
+,"Architect, software developer, energy modeler",6 to 10,0
+,"Architect, software developer, energy modeler",11  to 15,1
+,"Architect, software developer, energy modeler",16 or more,0
+,< 1,Manually create and document file names,0
+,< 1,GIT,0
+,< 1,Other,1
+,1 to 2,Manually create and document file names,14
+,1 to 2,GIT,3
+,1 to 2,Other,0
+,3  to 5,Manually create and document file names,18
+,3  to 5,GIT,5
+,3  to 5,Other,0
+,6 to 10,Manually create and document file names,24
+,6 to 10,GIT,9
+,6 to 10,Other,0
+,11  to 15,Manually create and document file names,9
+,11  to 15,GIT,1
+,11  to 15,Other,5
+,16 or more,Manually create and document file names,9
+,16 or more,GIT,3
+,16 or more,Other,0
