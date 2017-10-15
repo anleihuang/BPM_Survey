@@ -115,104 +115,182 @@ footer {
 
 <!-- navigation bar -->	
 <div class="topnav">
-		<a href="./main_TraditionCH/index_TraditionCH.html">首頁</a></li>
-      	<a href="./main_TraditionCH/1_AUTOMATION_TraditionCH.html">PART I: 工作流程自動化</a></li>
-		<a href="./main_TraditionCH/2_SCRIPTINGANDPROGRAMMING_TraditionCH.html">PART II: 編程技能</a>
-      	<a href="./main_TraditionCH/3_PERSONALDEVELOPMENT_TraditionCH.html">PART III: 個人發展</a>
-      	<a href="./main_TraditionCH/4_COMPANYSUPPORT_TraditionCH.html">PART IV: 公司</a>
-		<a href="./main_TraditionCH/5_RESOURCES_TraditionCH.html">PART V: 公司資源</a>
+		<a href="../main_TraditionCH/index_TraditionCH.html">首頁</a></li>
+      	<a href="../main_TraditionCH/1_AUTOMATION_TraditionCH.html">PART I: 工作流程自動化</a></li>
+		<a href="../main_TraditionCH/2_SCRIPTINGANDPROGRAMMING_TraditionCH.html">PART II: 編程技能</a>
+      	<a href="../main_TraditionCH/3_PERSONALDEVELOPMENT_TraditionCH.html">PART III: 個人發展</a>
+      	<a href="../main_TraditionCH/4_COMPANYSUPPORT_TraditionCH.html">PART IV: 公司</a>
+		<a href="../main_TraditionCH/5_RESOURCES_TraditionCH.html">PART V: 公司資源</a>
 </div>  
-<!-- end of navigation bar -->	
+<!-- end of navigation bar -->		
 
 <!-- language bar -->		
 <div class="container-fluid">  
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="4_COMPANYSUPPORT.html">English</a></li>
-      <li><a href="./main_TraditionCH/4_COMPANYSUPPORT_TraditionCH.html">繁體中文</a></li>
+      <li><a href="3_PERSONALDEVELOPMENT.html">English</a></li>
+      <li><a href="../main_TraditionCH/3_PERSONALDEVELOPMENT_TraditionCH.html">繁體中文</a></li>
 	  <li><a href="index_SimplifiedCH.html">简体中文</a></li>
     </ul>
   </div>
 </div>
-<!-- end of language bar -->		
+<!-- end of language bar -->
 
-<!-- -->
-		<h3 style="color:DodgerBlue">公司資源</h3>
+<!-- -->	
+		<h3 style="color:DodgerBlue">個人發展 ­ 您認為10年內產業將有什麼樣的變化?</h3>
 		<hr>
 		
-		<h4 style=" line-height: 300%;"> <b> Q: 您的公司是否支持員工學習程式語言或者是開發工具? </b> </h4>   
+		<h4 style=" line-height: 300%;"> <b> Q: 對您而言，學習程式語言的三個主要阻礙為何? </b> </h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
 		<div class = "col-lg-12">
 		</div>	
 		<div class="col-lg-4">
-			<div id="chart30">
+			<div id="chart16">
 				<p style="color:#ff7f0e"> 年資: < 2 years </p>
 				<script>  
-					render_radar("chart30","./data/company_support_b.json");
+					render_radar("chart16","./data/3barriers_b.json");
 				</script>
 			</div> 
 		</div> 
 				<div class="col-lg-4">
-			<div id="chart31">
+			<div id="chart17">
 				<p style="color:#6F257F"> 3-5 years </p>
 				<script>  
-					render_radar("chart31","./data/company_support_c.json");
+					render_radar("chart17","./data/3barriers_c.json");
 				</script>
 			</div> 
 		</div> 
 				<div class="col-lg-4">
-			<div id="chart32">
+			<div id="chart18">
 				<p style="color:#bcbd22";> 6-10 years </p>
 				<script>  
-					render_radar("chart32","./data/company_support_d.json");
+					render_radar("chart18","./data/3barriers_d.json");
 				</script>
 			</div> 
 		</div> 
 	</div>
 	<div class="row">
 				<div class="col-lg-4">
-			<div id="chart33">
+			<div id="chart19">	
 				<p style="color:#CA0D59"> 11-15 years </p>
 				<script>  
-					render_radar("chart33","./data/company_support_e.json");
+					render_radar("chart19","./data/3barriers_e.json");
 				</script>
 			</div> 
 		</div> 
 				<div class="col-lg-4">
-			<div id="chart34">
+			<div id="chart20">
 				<p style="color:#2ca02c"> >=16 years </p>
 				<script>  
-					render_radar("chart34","./data/company_support_f.json");
+					render_radar("chart20","./data/3barriers_f.json");
 				</script>
 			</div> 
 		</div> 
 	</div>
 
-	<div class="row"></div>
-
-		<h4 style=" line-height: 300%;"> <b> Q: 您的公司或團隊是否有會寫程式的成員來協助建築能源模擬的相關作業流程? </b> </h4>   
+	<h4 style=" line-height: 300%;"> <b> Q: 對您而言，學習程式語言的三個主要優勢為何? </b> </h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
 		<div class = "col-lg-12">
-		<img src="./data/EmployerSupport_countofprogrammer.png" width="1000 px" height="130 px">
-		</div>	 
+		</div>	
+		<div class="col-lg-4">
+			<div id="chart15">
+				<p style="color:#ff7f0e"> 年資: < 2 years </p>
+				<script>  
+					render_radar("chart15","./data/3gains_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart11">
+				<p style="color:#6F257F"> 3-5 years </p>
+				<script>  
+					render_radar("chart11","./data/3gains_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart12">
+				<p style="color:#bcbd22";> 6-10 years </p>
+				<script>  
+					render_radar("chart12","./data/3gains_d.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart13">
+				<p style="color:#CA0D59"> 11-15 years </p>
+				<script>  
+					render_radar("chart13","./data/3gains_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart14">
+				<p style="color:#2ca02c"> >=16 years </p>
+				<script>  
+					render_radar("chart14","./data/3gains_f.json");
+				</script>
+			</div> 
+		</div> 
 	</div>
 
-		<h4 style=" line-height: 300%;"> <b> Q: Would you or your company be willing to share the developed code or enhancements to already existing open source code? </b> </h4>   
+	<h4 style=" line-height: 300%;"> <b> Q: 您認為能源模擬師(energy modeller)的腳色在十年後將有什麼樣的變化?</b></h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
-		<div class = "col-lg-12">
-		<img src="./data/EmployerSupport_share.png" width="1000 px" height="130 px">
-		</div>	 
+		<div class="col-lg-4">
+			<div id="chart6">
+				<p style="color:#ff7f0e"> 年資: < 2 years </p>
+				<script>  
+					render_radar("chart6","./data/role_b.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart7">
+				<p style="color:#6F257F"> 3-5 years </p>
+				<script>  
+					render_radar("chart7","./data/role_c.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart8">
+				<p style="color:#bcbd22";> 6-10 years </p>
+				<script>  
+					render_radar("chart8","./data/role_d.json");
+				</script>
+			</div> 
+		</div> 
 	</div>
-
+	<div class="row">
+				<div class="col-lg-4">
+			<div id="chart9">
+				<p style="color:#CA0D59"> 11-15 years </p>
+				<script>  
+					render_radar("chart9","./data/role_e.json");
+				</script>
+			</div> 
+		</div> 
+				<div class="col-lg-4">
+			<div id="chart10">
+				<p style="color:#2ca02c"> >=16 years </p>
+				<script>  
+					render_radar("chart10","./data/role_f.json");
+				</script>
+			</div> 
+		</div> 
+	</div>
 
 <!-- footer -->
 <footer class="footer">
       <div class="container-fluid">
         <p>如有任何疑問，請隨時聯繫黃安蕾（anery817@gmail.com）和陳新（xchen.la@gmail.com）</p>
-      </div>
+       </div>
 </footer> 
 <!-- end of footer --> 		
+	
 </body>
 </html>
