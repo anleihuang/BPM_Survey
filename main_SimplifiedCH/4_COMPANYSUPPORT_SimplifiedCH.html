@@ -115,39 +115,40 @@ footer {
 
 <!-- navigation bar -->	
 <div class="topnav">
-	<a href="../main_TraditionCH/index_TraditionCH.html">首頁</a>
-      	<a href="../main_TraditionCH/1_AUTOMATION_TraditionCH.html">PART I: 工作流程自動化</a>
-	<a href="../main_TraditionCH/2_SCRIPTINGANDPROGRAMMING_TraditionCH.html">PART II: 編程技能</a>
-      	<a href="../main_TraditionCH/3_PERSONALDEVELOPMENT_TraditionCH.html">PART III: 個人發展</a>
-      	<a href="../main_TraditionCH/4_COMPANYSUPPORT_TraditionCH.html">PART IV: 公司資源</a>
-	<a href="../main_TraditionCH/5_RESOURCES_TraditionCH.html">PART V: 線上資源</a>
+	<a href="../main_SimplifiedCH/index_SimplifiedCH.html">首页</a>
+      	<a href="../main_SimplifiedCH/1_AUTOMATION_SimplifiedCH.html">PART I: 工作流程自动化</a>
+		<a href="../main_SimplifiedCH/2_SCRIPTINGANDPROGRAMMING_SimplifiedCH.html">PART II: 编程技能</a>
+      	<a href="../main_SimplifiedCH/3_PERSONALDEVELOPMENT_SimplifiedCH.html">PART III: 个人发展</a>
+      	<a href="../main_SimplifiedCH/4_COMPANYSUPPORT_SimplifiedCH.html">PART IV: 公司资源</a>
+		<a href="../main_SimplifiedCH/5_RESOURCES_SimplifiedCH.html">PART V: 线上资源</a>
 </div>  
 <!-- end of navigation bar -->	
 
 <!-- language bar -->		
 <div class="container-fluid">  
     <ul class="nav navbar-nav navbar-right">
-      	<li><a href="../2_SCRIPTINGANDPROGRAMMING.html">English</a></li>
-      	<li><a href="../main_TraditionCH/2_SCRIPTINGANDPROGRAMMING_TraditionCH.html">繁體中文</a></li>
-	<li><a href="../main_SimplifiedCH/index_SimplifiedCH.html">简体中文</a></li>
+      <li><a href="../4_COMPANYSUPPORT.html">English</a></li>
+      <li><a href="../main_TraditionCH/4_COMPANYSUPPORT_TraditionCH.html">繁體中文</a></li>
+	  <li><a href="../main_SimplifiedCH/4_COMPANYSUPPORT_SimplifiedCH.html">简体中文</a></li>
     </ul>
   </div>
 </div>
-<!-- end of language bar -->
+<!-- end of language bar -->		
 
-		<h3 style="color:DodgerBlue">編程技能 ­ 是否已應用在您的工作流程中? </h3>
+<!-- -->
+		<h3 style="color:DodgerBlue">公司资源</h3>
 		<hr>
 		
-		<h4 style=" line-height: 300%;"> <b> Q: 您計劃於未來學習的程式語言？ </b> </h4>   
+		<h4 style=" line-height: 300%;"> <b> Q: 您的公司是否支持员工学习程式语言或者是开发工具? </b> </h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
 		<div class = "col-lg-12">
 		</div>	
 		<div class="col-lg-4">
 			<div id="chart30">
-				<p style="color:#ff7f0e"> 年資: < 2 years </p>
+				<p style="color:#ff7f0e"> 年资: < 2 years </p>
 				<script>  
-					render_radar("chart30","../data/language_b.json");
+					render_radar("chart30","../data/company_support_b.json");
 				</script>
 			</div> 
 		</div> 
@@ -155,7 +156,7 @@ footer {
 			<div id="chart31">
 				<p style="color:#6F257F"> 3-5 years </p>
 				<script>  
-					render_radar("chart31","../data/language_c.json");
+					render_radar("chart31","../data/company_support_c.json");
 				</script>
 			</div> 
 		</div> 
@@ -163,7 +164,7 @@ footer {
 			<div id="chart32">
 				<p style="color:#bcbd22";> 6-10 years </p>
 				<script>  
-					render_radar("chart32","../data/language_d.json");
+					render_radar("chart32","../data/company_support_d.json");
 				</script>
 			</div> 
 		</div> 
@@ -173,7 +174,7 @@ footer {
 			<div id="chart33">
 				<p style="color:#CA0D59"> 11-15 years </p>
 				<script>  
-					render_radar("chart33","../data/language_e.json");
+					render_radar("chart33","../data/company_support_e.json");
 				</script>
 			</div> 
 		</div> 
@@ -181,53 +182,37 @@ footer {
 			<div id="chart34">
 				<p style="color:#2ca02c"> >=16 years </p>
 				<script>  
-					render_radar("chart34","../data/language_f.json");
+					render_radar("chart34","../data/company_support_f.json");
 				</script>
 			</div> 
 		</div> 
 	</div>
-	
-	<h4 style=" line-height: 300%;"> <b> Q: 是什麼樣的原因啟發您，讓您想自己來寫程式? </b> </h4>   
-	<div class="row"> 
-		<!-- Row 5: Q: xxxxxx  -->  
-		<div class="col-lg-4">
-			<div id="chart40"></div>
-				<script>  
-					render_radar("chart40","../data/measures.json");
-				</script>
-			</div> 
-		<div class = "col-lg-8">
-			<p> 
-			<br>
-			<br>
-			<b>版本控制 (Model Version Control):</b> GIT, Bitbucket <br>
-			<b>批次處理運算 (Batch Processing):</b>Java, Python, Ruby, Bash, Shell <br>
-			<b>資料視覺化 (Data visualization):</b> Data analysis: R, Python ; Data processing: Python, Ruby ; 
-                                       Visualization: Javascript (d3.js) <br>
 
-			<b>參數分析 (Parametric analysis):</b>Java, Python, Ruby, Bash, Shell<br>
-			<b>想使用的功能目前軟體不支援(Need new features that are not currently available):</b>OS Measure: Ruby <br>
-			<b>批次更改參數(Easy to make specific changes to multiple files):</b> Ruby, Python, Excel VBA <br>
-			<b>製作模板，簡化工作流程(Streamline process (build templates/ libraries)):</b> Ruby, Python, Excel VBA, SQL
-		</p>	
-		</div>	
-		</div> 
-	</div>	
+	<div class="row"></div>
 
-	<h4 style=" line-height: 300%;"> <b> Q: 學習的途徑及資源 </b> </h4>   
+		<h4 style=" line-height: 300%;"> <b> Q: 您的公司或团队是否有会写程式的成员来协助建筑能源模拟的相关作业流程? </b> </h4>   
 	<div class="row"> 
 		<!-- Row 5: Q: xxxxxx  -->  
 		<div class = "col-lg-12">
-		<img src="../data/Pathways_to_learn.png" width="800 px" height="400 px">
+		<img src="../data/EmployerSupport_countofprogrammer.png" width="1000 px" height="130 px">
 		</div>	 
 	</div>
+
+		<h4 style=" line-height: 300%;"> <b> Q:您或您的公司是否愿意分享开源代码？ </b> </h4>   
+	<div class="row"> 
+		<!-- Row 5: Q: xxxxxx  -->  
+		<div class = "col-lg-12">
+		<img src="../data/EmployerSupport_share.png" width="1000 px" height="130 px">
+		</div>	 
+	</div>
+
 
 <!-- footer -->
 <footer class="footer">
       <div class="container-fluid">
-        <p>如有任何疑問，請隨時聯繫黃安蕾（anery817@gmail.com）和陳行（xchen.la@gmail.com）</p>
+        <p>如有任何疑问，请随时联系黄安蕾（anery817@gmail.com）和陈行（xchen.la@gmail.com）</p>
       </div>
 </footer> 
-<!-- end of footer --> 	
+<!-- end of footer --> 		
 </body>
 </html>
